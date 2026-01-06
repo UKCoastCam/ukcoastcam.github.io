@@ -1,0 +1,48 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+h1 {
+text-align: center;
+margin: 10px 0;
+}
+
+#map {
+height: 90vh;
+}
+.button-container {
+text-align: center; /* center the buttons horizontally */
+margin-bottom: 10px;
+}
+
+/* shared styles for both buttons */
+.button-container a {
+display: inline-block;
+padding: 12px 24px;
+font-weight: bold;
+text-decoration: none;
+border-radius: 6px;
+cursor: pointer;
+margin: 0 5px; /* space between buttons */
+color: white;
+}
+
+/* specific button colors */
+.submit-btn {
+background: #2c7be5;
+color: white;
+}
+
+.submit-btn:hover {
+background: #1a5fc2;
+}
+
+.report-btn {
+background: #e52c2c;
+color: white;
+}
+
+.report-btn:hover {
+background: #b21f1f;
+}
