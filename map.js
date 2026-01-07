@@ -1,5 +1,4 @@
 
-
 // --------------------
 // Create map centred on the UK
 // --------------------
@@ -128,14 +127,21 @@ L.marker([52.82401018349658, -4.498773499201506]).bindPopup("<strong>Abersoch Ma
 L.marker([52.943536393335485, -4.567956486162049]).bindPopup("<strong>Ty Coch Inn</strong><br><a href=\"http://www.tycoch.co.uk/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([52.15980275177253, -4.471635140436448]).bindPopup("<strong>Llangrannog Beach</strong><br><a href=\"https://www.camsecure.co.uk/llangrannog_beach_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([53.14304240739951, -4.275962453809385]).bindPopup("<strong>Victoria Dock</strong><br>3x webcam views<br><a href=\"https://www.caernarfonharbour.org.uk/webcams/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
-L.marker([52.91219107900811, -4.099226443627253]).bindPopup("<strong>Portmeirion Estuary</strong><br><br><a href=\"https://portmeirion.wales/galleries/web-cams\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([52.91219107900811, -4.099226443627253]).bindPopup("<strong>Portmeirion Estuary</strong><br>Live Streaming Webcams — Portmeirion North Wales<br><a href=\"https://portmeirion.wales/galleries/web-cams\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([53.25518382741184, -4.102483930811804]).bindPopup("<strong>Northern Menai Strait</strong><br>NWVYC Webcam — Caernarfon Harbour Trust<br><a href=\"https://www.caernarfonharbour.org.uk/nwvyc-webcam/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([54.278370563200866, -2.9555181737220373]).bindPopup("<strong>Lakeside Pier</strong><br>Lakeside Webcam<br><a href=\"https://www.windermere-lakecruises.co.uk/webcam/lakeside-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([54.41969480113176, -2.9623977046965613]).bindPopup("<strong>Ambleside (Waterhead) Pier</strong><br>Ambleside Webcam<br><a href=\"https://www.windermere-lakecruises.co.uk/webcam/ambleside-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([54.36288936760546, -2.922980827664341]).bindPopup("<strong>Bowness Pier</strong><br>Bowness Webcam<br><a href=\"https://www.windermere-lakecruises.co.uk/webcam/bowness-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([54.409455547725386, -2.948697435041926]).bindPopup("<strong>Low Wood Bay</strong><br>Live webcam: Lake Windermere<br><a href=\"https://englishlakes.co.uk/hotels/low-wood-bay/watersports/lake-windermere-webcam/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
-L.marker([54.353023708761924, -2.939774299871883]).bindPopup("<strong>Ferry ramp</strong><br>Ferry Cam — Freshwater Biological Association<br><a href=\"https://www.fba.org.uk/windermere-ferry-cam\" target=\"_blank\" rel=\"noopener\">View webcam</a>")
-
+L.marker([54.353023708761924, -2.939774299871883]).bindPopup("<strong>Ferry ramp</strong><br>Ferry Cam — Freshwater Biological Association<br><a href=\"https://www.fba.org.uk/windermere-ferry-cam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([32.32895462897819, -64.83232575135602]).bindPopup("<strong>Bermuda Dockyard</strong><br><a href=\"https://www.portbermudawebcam.com/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([18.187622700009527, -63.13473907758634]).bindPopup("<strong>Meads Bay</strong><br><a href=\"https://www.myearthcam.com/malliouhana\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([18.179296203554028, -63.1441833850818]).bindPopup("<strong>Meads Bay</strong><br><a href=\"https://www.earthcam.com/world/anguilla/meadsbay/?cam=meadsbay_hd\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([18.441326730124633, -64.75792313299952]).bindPopup("<strong>White Bay</strong><br><a href=\"https://www.livebeaches.com/webcams/pink-house-villas-bvi-live-cam/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([18.425903825921665, -64.65729189473294]).bindPopup("<strong>Cane Garden Bay</strong><br><a href=\"https://www.livebeaches.com/webcams/pussers-at-myetts-live-cam-in-bvi/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([50.79743897823012, -1.1984330527469809]).bindPopup("<strong>Lee on Solent Sailing Club</strong><br><a href=\"https://www.camsecure.co.uk/lee_on_the_solent_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([50.85205944486873, -1.3058559097627334]).bindPopup("<strong>Hamble River Entrance</strong><br><a href=\"https://www.camsecure.co.uk/hamble_river_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([50.76604665309442, -0.874949453108074]).bindPopup("<strong>East Wittering</strong><br><a href=\"https://www.shore.co.uk/surf-check.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>")
 
 ];
 
@@ -150,3 +156,5 @@ webcamMarkers.forEach(marker => {
 // Add cluster to map
 // --------------------
 map.addLayer(markerCluster);
+
+
