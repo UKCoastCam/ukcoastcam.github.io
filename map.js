@@ -1,4 +1,5 @@
 
+
 // --------------------
 // Create map centred on the UK
 // --------------------
@@ -145,6 +146,124 @@ L.marker([50.76604665309442, -0.874949453108074]).bindPopup("<strong>East Witter
 
 ];
 
+
+// --- Random Webcam list (curated from [webcams.xlsx](https://mcga-my.sharepoint.com/personal/rob_priestley_mcga_gov_uk/_layouts/15/Doc.aspx?sourcedoc=%7BC06D4A79-616E-49A1-900A-D99D680A23CC%7D&file=webcams.xlsx&action=default&mobileredirect=true&EntityRepresentationId=02ea6875-bd86-4b0d-a974-29e61d5f13c8) UK tab) ---
+const webcamLinks = [
+  "https://www.isleofwight.com/webcams/needles/",
+  "https://www.isleofwight.com/webcams/colwell/",
+  "https://www.isleofwight.com/webcams/ventnor/",
+  "https://www.isleofwight.com/webcams/sandown/",
+  "https://www.isleofwight.com/webcams/ryde/",
+  "https://www.isleofwight.com/webcams/shanklin/",
+  "https://www.isleofwight.com/webcams/cowes/",
+  "https://www.brightoncctv.co.uk/i360-cams",
+  "https://www.camsecure.co.uk/Camsecure2/Brighton_Harbour_Webcam.html",
+  "https://www.camsecure.co.uk/brixham_breakwater.html",
+  "https://www.camsecure.co.uk/Camsecure3/Brixham_Harbour.html",
+  "https://www.camsecure.co.uk/brixham_sailing_webcam.html",
+  "https://www.camsecure.co.uk/itchenor_webcam.html",
+  "https://www.skylinewebcams.com/en/webcam/united-kingdom/england/hastings/hastings-pier.html",
+  "https://www.camsecure.co.uk/bembridge_sailing.html",
+  "https://www.camsecure.co.uk/cowes_webcam.html",
+  "https://www.camsecure.co.uk/river_medina_webcam.html",
+  "https://www.camsecure.co.uk/sea_view_yacht_club_webcam.html",
+  "https://www.camsecure.co.uk/yarmouth-webcam.html",
+  "https://www.camsecure.co.uk/Poole_Quay_Webcam.html",
+  "https://www.camsecure.co.uk/portland_harbour_webcam.html",
+  "https://www.skylinewebcams.com/en/webcam/united-kingdom/england/portsmouth/portsmouth.html",
+  "https://www.camsecure.co.uk/seaton%20webcam.html",
+  "https://www.camsecure.co.uk/swanage_lifeboat_webcam.html",
+  "https://www.camsecure.co.uk/swanage-webcam.html",
+  "https://www.camsecure.co.uk/torquay_harbour_inner_dock.html",
+  "https://www.camsecure.co.uk/torquay_sea_view.html",
+  "https://www.camsecure.co.uk/Camsecure2/Weymouth_Seafront_Webcam.html",
+  "https://www.camsecure.co.uk/worthing_beach_webcam.html",
+  "https://www.camsecure.co.uk/worthing_seafront_webcam.html",
+  "https://www.skylinewebcams.com/webcam/united-kingdom/wales/gwynedd/barmouth-harbour.html",
+  "https://abersoch.com/abersoch-watersports-inner-harbour-webcam/",
+  "https://abersoch.com/offaxis-pwllheli-marina-webcam/",
+  "https://abersoch.com/hafan-pwllheli-marina-webcam/",
+  "https://abersoch.com/porth-dinllaen-sunset-webcam/",
+  "https://abersoch.com/morfa-nefyn-multi-view-webcam/",
+  "https://camsecure.co.uk/rhosneigr_beach_webcam.html",
+  "https://weather.trearddurbay.org/webcam/",
+  "https://www.camsecure.co.uk/lligwy-beach-webcam.html",
+  "https://www.redwharfbaysc.co.uk/web-cam",
+  "https://www.stdavidsleisure.com/Holiday-Parks-North-Wales/St-Davids-Park-Anglesey/Web-Cam/",
+  "https://www.youtube.com/@MinyDonLlandudno/streams",
+  "https://www.westshorebeachcafe.com/webcam-in-llandudno/",
+  "https://www.skylinewebcams.com/webcam/united-kingdom/england/blackpool/blackpool.html",
+  "https://www.granadaapartments.uk/live-cameras/berkeley",
+  "https://www.granadaapartments.uk/live-cameras/queens-mansions-1",
+  "https://www.granadaapartments.uk/live-cameras/queens-mansions-2",
+  "https://www.webcamtaxi.com/en/england/lancashire/morecambe-bay.html",
+  "https://www.webcamtaxi.com/en/england/lancashire/marine-rd-morecambe.html",
+  "https://arnsidechipshop.co.uk/piercam",
+  "https://www.cumbriawildlifetrust.org.uk/wildlife/cams/seal-cam",
+  "https://www.discoverfylde.co.uk/st-annes-beach-webcam/",
+  "https://www.bridhub.co.uk/public/Brid-Harbour-Cam.cfm",
+  "https://www.nci.org.uk/nci-hornsea-webcams/",
+  "https://www.youtube.com/watch?v=hywdwhtID90",
+  "https://hunstanton.webcam/cliff-top",
+  "https://hunstanton.webcam/north-prom",
+  "https://hunstanton.webcam/south-beach",
+  "https://hunstanton.webcam/south-prom",
+  "https://www.portofwells.co.uk/webcam/",
+  "https://g0.ipcamlive.com/player/player.php?alias=tyhfuel&skin=white&autoplay=0&mute=1&timelapseplayerenabled=1",
+  "https://g0.ipcamlive.com/player/player.php?alias=layhentrance&skin=white&autoplay=0&mute=1&timelapseplayerenabled=1",
+  "https://www.wyc.org.uk/webcam-weather-tides/",
+  "https://www.twitch.tv/cmalbrodick",
+  "https://www.twitch.tv/cmallochranza",
+  "https://www.skylinewebcams.com/en/webcam/united-kingdom/england/deal/deal-kent.html",
+  "https://www.youtube.com/live/q_43ulLyBeY",
+  "https://weather.lhyc.org.uk/live/",
+  "https://www.iossailingclub.com/webcam-and-weather",
+  "https://www.southendpier.co.uk/webcam",
+  "https://www.viewsurf.com/univers/plage/vue/18722-france-nord-pas-de-calais-calais-live",
+  "https://www.villatremail.ovh/webcam-en-direct",
+  "https://camsecure.co/httpswebcam/brightlingsea/brightlingsea.html",
+  "https://webcamexpo.com/bournemouth-webcam-uk/",
+  "https://www.teignmouth-nci.org.uk/dual-live-streams",
+  "https://visit-tywyn.co.uk/webcam/",
+  "https://hha.co.uk/news/live-stream-cameras/",
+  "https://coastwatch-felixstowe.co.uk/New/webcams.html",
+  "https://www.camsecure.co.uk/warren_beach_webcam.html",
+  "https://abersoch.com/abersoch-hydro-main-beach-webcam/",
+  "http://www.tycoch.co.uk/",
+  "https://www.camsecure.co.uk/llangrannog_beach_webcam.html",
+  "https://www.caernarfonharbour.org.uk/webcams/",
+  "https://portmeirion.wales/galleries/web-cams",
+  "https://www.caernarfonharbour.org.uk/nwvyc-webcam/",
+  "https://www.windermere-lakecruises.co.uk/webcam/lakeside-webcam",
+  "https://www.windermere-lakecruises.co.uk/webcam/ambleside-webcam",
+  "https://www.windermere-lakecruises.co.uk/webcam/bowness-webcam",
+  "https://englishlakes.co.uk/hotels/low-wood-bay/watersports/lake-windermere-webcam/",
+  "https://www.fba.org.uk/windermere-ferry-cam",
+  "https://www.camsecure.co.uk/lee_on_the_solent_webcam.html",
+  "https://www.camsecure.co.uk/hamble_river_webcam.html",
+  "https://www.shore.co.uk/surf-check.html"
+];
+
+// --- Random open helper (unchanged) ---
+function openRandomWebcam() {
+  if (!webcamLinks.length) return;
+  const index = Math.floor(Math.random() * webcamLinks.length);
+  const url = webcamLinks[index];
+  window.open(url, '_blank', 'noopener');
+}
+
+// --- Wire the button on index.html (unchanged) ---
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('randomWebcamBtn');
+  if (btn) {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();   // prevents '#' navigation
+      openRandomWebcam();
+    });
+  }
+});
+
+
 // --------------------
 // Add webcams to cluster
 // --------------------
@@ -156,5 +275,4 @@ webcamMarkers.forEach(marker => {
 // Add cluster to map
 // --------------------
 map.addLayer(markerCluster);
-
 
