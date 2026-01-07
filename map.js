@@ -3,7 +3,7 @@
 // --------------------
 // Create map centred on the UK
 // --------------------
-const map = L.map('map').setView([54.5, -3], 6);
+const map = L.map('map').setView([54.5, -3], 4);
 
 // --------------------
 // Add UK-only search
@@ -273,5 +273,6 @@ webcamMarkers.forEach(marker => {
 // Add cluster to map
 // --------------------
 map.addLayer(markerCluster);
+
 
 
