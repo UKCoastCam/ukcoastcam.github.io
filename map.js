@@ -10,10 +10,8 @@ const map = L.map('map').setView([54.5, -3], 6);
 // --------------------
 L.Control.geocoder({
   defaultMarkGeocode: false,
-  placeholder: "Search UK places…",
-  geocoder: L.Control.Geocoder.nominatim({
-    geocodingQueryParams: { countrycodes: "gb" }
-  })
+  placeholder: "Search the map…",
+  geocoder: L.Control.Geocoder.nominatim()
 })
 .on("markgeocode", function (e) {
   map.fitBounds(e.geocode.bbox);
@@ -275,4 +273,5 @@ webcamMarkers.forEach(marker => {
 // Add cluster to map
 // --------------------
 map.addLayer(markerCluster);
+
 
