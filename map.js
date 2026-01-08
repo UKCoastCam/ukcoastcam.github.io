@@ -3,14 +3,14 @@
 // --------------------
 // Create map centred on the UK
 // --------------------
-const map = L.map('map').setView([54.5, -3], 4);
+const map = L.map('map').setView([54.5, -3], 3);
 
 // --------------------
 // Add UK-only search
 // --------------------
 L.Control.geocoder({
   defaultMarkGeocode: false,
-  placeholder: "Search the map…",
+  placeholder: "Search places…",
   geocoder: L.Control.Geocoder.nominatim()
 })
 .on("markgeocode", function (e) {
@@ -140,7 +140,47 @@ L.marker([18.441326730124633, -64.75792313299952]).bindPopup("<strong>White Bay<
 L.marker([18.425903825921665, -64.65729189473294]).bindPopup("<strong>Cane Garden Bay</strong><br><a href=\"https://www.livebeaches.com/webcams/pussers-at-myetts-live-cam-in-bvi/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([50.79743897823012, -1.1984330527469809]).bindPopup("<strong>Lee on Solent Sailing Club</strong><br><a href=\"https://www.camsecure.co.uk/lee_on_the_solent_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([50.85205944486873, -1.3058559097627334]).bindPopup("<strong>Hamble River Entrance</strong><br><a href=\"https://www.camsecure.co.uk/hamble_river_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
-L.marker([50.76604665309442, -0.874949453108074]).bindPopup("<strong>East Wittering</strong><br><a href=\"https://www.shore.co.uk/surf-check.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>")
+L.marker([50.76604665309442, -0.874949453108074]).bindPopup("<strong>East Wittering</strong><br><a href=\"https://www.shore.co.uk/surf-check.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+
+L.marker([-38.0087382861636, -57.537636439370424]).bindPopup("<strong>Mar del Plata</strong><br><a href=\"https://www.webcamtaxi.com/en/argentina/buenos-aires/mar-del-plata.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([-38.583074966809974, -58.72950365247535]).bindPopup("<strong>Playa de Necochea</strong><br><a href=\"https://www.youtube.com/watch?v=zIUoe2Bjtgk\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([-27.421323296285657, -48.4385139397202]).bindPopup("<strong>Cachoeira de Bom Jesus</strong><br><a href=\"https://www.youtube.com/watch?v=GFAEq2j3csQ\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+
+L.marker([21.26147560762602, -157.82109261803868]).bindPopup("<strong>Kaluahole Channel</strong><br><a href=\"https://www.livebeaches.com/webcams/elks-lodge-shaka-cam-in-honolulu/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([21.66507696568255, -158.05092969363636]).bindPopup("<strong>Ehukai Beach</strong><br><a href=\"https://www.livebeaches.com/webcams/ehukai-beach-webcam-in-hawaii/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+
+L.marker([40.61565972790332, -74.06352178515826]).bindPopup("<strong>New York Harbour - Staten</strong><br><a href=\"https://www.nyharborwebcam.com/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([40.909021383396166, -72.28484295047917]).bindPopup("<strong>Sagg Main Beach</strong><br><a href=\"https://webcams24.live/webcam/sagg-main-beach-ny-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([40.936106646603584, -72.21438404918528]).bindPopup("<strong>Georgica Beach</strong><br>Location requires refining<br><a href=\"https://webcams24.live/webcam/georgica-beach-east-hampton-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+
+L.marker([25.785316911611044, -80.18688363424508]).bindPopup("<strong>Miami Cruise Terminal</strong><br><a href=\"https://webcams24.live/webcam/port-miami-florida-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([26.189938079512753, -80.09508010500177]).bindPopup("<strong>Anglins Pier</strong><br><a href=\"https://webcams24.live/webcam/anglins-pier-florida-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([26.317503784209663, -80.07554769938334]).bindPopup("<strong>Deerfield Beach</strong><br><a href=\"https://webcams24.live/webcam/deerfield-beach-surf-florida-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+
+L.marker([49.129835396558995, -125.9015171556648]).bindPopup("<strong>Mackenzie Beach</strong><br><a href=\"https://webcams24.live/webcam/ocean-village-resort-tofino-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([33.65510485662744, -118.00408865829212]).bindPopup("<strong>Huntington Beach</strong><br><a href=\"https://www.youtube.com/watch?v=mhQjsLBfOoY\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([27.73162065826818, -97.1318948120484]).bindPopup("<strong>Port Aransas Beach</strong><br><a href=\"https://hdontap.com/stream/518728/port-aransas-beach-live-webvam/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+
+L.marker([-33.84983493577617, 151.21424239471702]).bindPopup("<strong>Sydney Harbour Bridge</strong><br><a href=\"https://webcams24.live/webcam/sydney-harbour-australia-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([-33.8507972429043, 151.21254723857047]).bindPopup("<strong>Sydney Harbour</strong><br>Panning camera<br><a href=\"https://webcams24.live/webcam/sydney-harbour-bridge-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+
+L.marker([28.068005255377944, -16.732279509875138]).bindPopup("<strong>Playa de Troya</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/espana/canarias/santa-cruz-de-tenerife/playa-troya.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([28.09177557051144, -16.74422695310469]).bindPopup("<strong>Playa del Duque</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/espana/canarias/santa-cruz-de-tenerife/playa-del-duque.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+
+L.marker([39.14368884116472, 23.867429440385635]).bindPopup("<strong>Patitiri Port</strong><br><a href=\"https://webcams24.live/webcam/patitiri-port-greece-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([40.780772300303916, 24.710886702263647]).bindPopup("<strong>Thasos Old Harbour</strong><br>Panning webcam<br><a href=\"https://webcams24.live/webcam/view-from-hotel-angelica-thasos-greece-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+
+L.marker([53.88557996784982, 8.639696232225175]).bindPopup("<strong>Duhnen Strand</strong><br><a href=\"https://webcams24.live/webcam/duhner-strandpromenade-cuxhaven-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([54.907425773276366, 8.298223222747351]).bindPopup("<strong>Westerland Beach</strong><br>Panning webcam<br><a href=\"https://webcams24.live/webcam/westerland-sylt-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+
+L.marker([9.478399837306123, 100.06619591474424]).bindPopup("<strong>Crystal Bay</strong><br><a href=\"https://webcams24.live/webcam/crystal-bay-beach-resort-samui-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+
+L.marker([19.33470786082442, -81.381589983819]).bindPopup("<strong>7 Mile Beach</strong><br><a href=\"https://www.coralstoneclub.com/photo-gallery/beachcams/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([21.796523168935323, -72.17695779576604]).bindPopup("<strong>Grace Bay Beach</strong><br><a href=\"https://www.sevenstarsgracebay.com/live-cam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([17.918587942356616, -62.86000138285849]).bindPopup("<strong>Flamand Beach</strong><br><a href=\"https://webcams24.live/webcam/flamand-beach-gustavia-saint-barthelemy-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([25.073409460530893, -77.39707934712706]).bindPopup("<strong>Gooman Bay</strong><br><a href=\"https://hdontap.com/stream/541510/baha-mar-nassau-bahamas-live-webcam/\" target=\"_blank\" rel=\"noopener\">View webcam</a>")
+
+
 
 ];
 
@@ -273,6 +313,4 @@ webcamMarkers.forEach(marker => {
 // Add cluster to map
 // --------------------
 map.addLayer(markerCluster);
-
-
 
