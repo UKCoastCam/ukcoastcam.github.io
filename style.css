@@ -108,3 +108,56 @@ text-decoration: underline;
   background: #D0872E;
 }
 
+
+.help-us-grow-menu {
+  margin-left: 32px;
+  background: #fffbe6;
+  border: 2px solid #ffd700;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-weight: 500;
+  color: #2c7be5;
+  box-shadow: 0 2px 8px rgba(44,123,229,0.07);
+  display: inline-block;
+}
+
+.help-us-grow-menu .highlight {
+  color: #2c7be5;
+  font-weight: bold;
+  background: #e6f0fa;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-left: 6px;
+  transition: background 0.2s;
+}
+.help-us-grow-menu .highlight:hover {
+  background: #d0e6fa;
+  text-decoration: underline;
+}
+@media (max-width: 800px) {
+  .help-us-grow-menu {
+    display: block;
+    margin: 8px 0 0 0;
+    font-size: 0.98em;
+    text-align: left;
+  }
+}
+
+
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.site-logo {
+  max-width: 320px;
+  width: 90%;
+  height: auto;
+  display: block;
+}
+
