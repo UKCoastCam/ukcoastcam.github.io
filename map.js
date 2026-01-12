@@ -29,7 +29,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // Create marker cluster group
 // --------------------
 const markerCluster = L.markerClusterGroup({
-  disableClusteringAtZoom: 12,
+  disableClusteringAtZoom: 9,
   chunkedLoading: true
 });
 
@@ -392,4 +392,5 @@ webcamMarkers.forEach(marker => {
 // Add cluster to map
 // --------------------
 map.addLayer(markerCluster);
+
 
