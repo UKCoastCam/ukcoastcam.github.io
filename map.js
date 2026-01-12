@@ -3,7 +3,7 @@
 // --------------------
 // Create map centred on the UK
 // --------------------
-const map = L.map('map').setView([54.5, -3], 3);
+const map = L.map('map').setView([0, 0], 2);
 
 // --------------------
 // Add UK-only search
@@ -126,13 +126,13 @@ L.marker([52.82401018349658, -4.498773499201506]).bindPopup("<strong>Abersoch Ma
 L.marker([52.943536393335485, -4.567956486162049]).bindPopup("<strong>Ty Coch Inn</strong><br><a href=\"http://www.tycoch.co.uk/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([52.15980275177253, -4.471635140436448]).bindPopup("<strong>Llangrannog Beach</strong><br><a href=\"https://www.camsecure.co.uk/llangrannog_beach_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([53.14304240739951, -4.275962453809385]).bindPopup("<strong>Victoria Dock</strong><br>3x webcam views<br><a href=\"https://www.caernarfonharbour.org.uk/webcams/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
-L.marker([52.91219107900811, -4.099226443627253]).bindPopup("<strong>Portmeirion Estuary</strong><br>Live Streaming Webcams — Portmeirion North Wales<br><a href=\"https://portmeirion.wales/galleries/web-cams\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
-L.marker([53.25518382741184, -4.102483930811804]).bindPopup("<strong>Northern Menai Strait</strong><br>NWVYC Webcam — Caernarfon Harbour Trust<br><a href=\"https://www.caernarfonharbour.org.uk/nwvyc-webcam/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
-L.marker([54.278370563200866, -2.9555181737220373]).bindPopup("<strong>Lakeside Pier</strong><br>Lakeside Webcam<br><a href=\"https://www.windermere-lakecruises.co.uk/webcam/lakeside-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
-L.marker([54.41969480113176, -2.9623977046965613]).bindPopup("<strong>Ambleside (Waterhead) Pier</strong><br>Ambleside Webcam<br><a href=\"https://www.windermere-lakecruises.co.uk/webcam/ambleside-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([52.91219107900811, -4.099226443627253]).bindPopup("<strong>Portmeirion Estuary</strong><br><br><a href=\"https://portmeirion.wales/galleries/web-cams\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([53.25518382741184, -4.102483930811804]).bindPopup("<strong>Northern Menai Strait</strong><br><br><a href=\"https://www.caernarfonharbour.org.uk/nwvyc-webcam/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([54.278370563200866, -2.9555181737220373]).bindPopup("<strong>Lakeside Pier</strong><br><br><a href=\"https://www.windermere-lakecruises.co.uk/webcam/lakeside-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([54.41969480113176, -2.9623977046965613]).bindPopup("<strong>Ambleside (Waterhead) Pier</strong><br><br><a href=\"https://www.windermere-lakecruises.co.uk/webcam/ambleside-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([54.36288936760546, -2.922980827664341]).bindPopup("<strong>Bowness Pier</strong><br>Bowness Webcam<br><a href=\"https://www.windermere-lakecruises.co.uk/webcam/bowness-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
-L.marker([54.409455547725386, -2.948697435041926]).bindPopup("<strong>Low Wood Bay</strong><br>Live webcam: Lake Windermere<br><a href=\"https://englishlakes.co.uk/hotels/low-wood-bay/watersports/lake-windermere-webcam/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
-L.marker([54.353023708761924, -2.939774299871883]).bindPopup("<strong>Ferry ramp</strong><br>Ferry Cam — Freshwater Biological Association<br><a href=\"https://www.fba.org.uk/windermere-ferry-cam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([54.409455547725386, -2.948697435041926]).bindPopup("<strong>Low Wood Bay</strong><br><br><a href=\"https://englishlakes.co.uk/hotels/low-wood-bay/watersports/lake-windermere-webcam/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([54.353023708761924, -2.939774299871883]).bindPopup("<strong>Ferry ramp</strong><br><br><a href=\"https://www.fba.org.uk/windermere-ferry-cam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([32.32895462897819, -64.83232575135602]).bindPopup("<strong>Bermuda Dockyard</strong><br><a href=\"https://www.portbermudawebcam.com/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([18.187622700009527, -63.13473907758634]).bindPopup("<strong>Meads Bay</strong><br><a href=\"https://www.myearthcam.com/malliouhana\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([18.179296203554028, -63.1441833850818]).bindPopup("<strong>Meads Bay</strong><br><a href=\"https://www.earthcam.com/world/anguilla/meadsbay/?cam=meadsbay_hd\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
@@ -178,7 +178,58 @@ L.marker([9.478399837306123, 100.06619591474424]).bindPopup("<strong>Crystal Bay
 L.marker([19.33470786082442, -81.381589983819]).bindPopup("<strong>7 Mile Beach</strong><br><a href=\"https://www.coralstoneclub.com/photo-gallery/beachcams/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([21.796523168935323, -72.17695779576604]).bindPopup("<strong>Grace Bay Beach</strong><br><a href=\"https://www.sevenstarsgracebay.com/live-cam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 L.marker([17.918587942356616, -62.86000138285849]).bindPopup("<strong>Flamand Beach</strong><br><a href=\"https://webcams24.live/webcam/flamand-beach-gustavia-saint-barthelemy-webcam\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
-L.marker([25.073409460530893, -77.39707934712706]).bindPopup("<strong>Gooman Bay</strong><br><a href=\"https://hdontap.com/stream/541510/baha-mar-nassau-bahamas-live-webcam/\" target=\"_blank\" rel=\"noopener\">View webcam</a>")
+L.marker([25.073409460530893, -77.39707934712706]).bindPopup("<strong>Gooman Bay</strong><br><a href=\"https://hdontap.com/stream/541510/baha-mar-nassau-bahamas-live-webcam/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+
+
+
+  L.marker([56.41643428655136, -5.471424516591476]).bindPopup("<strong>Oban Bay</strong><br><em>Panning view</em><br><a href=\"https://camsecure.co.uk/oban%20bay%20webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([58.871136670296615, -2.892125638722046]).bindPopup("<strong>Churchill barriers</strong><br><a href=\"https://camsecure.co.uk/orkney%20islands%20webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([57.714718015148655, -7.1695278573664]).bindPopup("<strong>Berneray Harbour</strong><br><a href=\"https://camsecure.co.uk/bays%20loch%20webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([56.41042603427964, -5.486602674646835]).bindPopup("<strong>Oban waterfront</strong><br><a href=\"https://camsecure.co.uk/oban_waterside_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([56.41975823908796, -5.479824841083372]).bindPopup("<strong>Oban Bay</strong><br><a href=\"https://camsecure.co.uk/oban%20bay%20to%20kerrera%20webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([55.98309643630443, -3.22318558117044]).bindPopup("<strong>Forth Yacht Club</strong><br><a href=\"https://camsecure.co.uk/firth_of_forth_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([56.468398458763595, -2.89535923056464]).bindPopup("<strong>River Tay</strong><br><a href=\"https://camsecure.co.uk/Camsecure3/Dundee_Webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([56.336264080189565, -2.7823038420656845]).bindPopup("<strong>St Andrews</strong><br><a href=\"https://camsecure.co.uk/st_andrews_beach.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.217034351346165, -5.476778396316587]).bindPopup("<strong>Porthgwidden Beach</strong><br><a href=\"https://camsecure.co.uk/porthgwidden_beach_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.07694258046086, -5.699018535026527]).bindPopup("<strong>Sennen Cove</strong><br><a href=\"https://camsecure.co.uk/sennen_cove_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.07774370109936, -5.704290226432298]).bindPopup("<strong>Sennen Harbour</strong><br><a href=\"https://camsecure.co.uk/sennen_harbour_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.22410614199363, -5.391701682080658]).bindPopup("<strong>Godrevy / St Gothian</strong><br><a href=\"https://camsecure.co.uk/Camsecure3/Gwithian_Beach_Webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.12697810549059, -5.4752525417558]).bindPopup("<strong>Mounts Bay</strong><br><em>Panning view</em><br><a href=\"https://camsecure.co.uk/marazion.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.10052566321354, -5.551985203522453]).bindPopup("<strong>Newlyn</strong><br><a href=\"https://camsecure.co.uk/newlyn%20live%20webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.21862959106866, -5.476180166894618]).bindPopup("<strong>St Ives NCI - Bay view</strong><br><a href=\"https://camsecure.co.uk/StIves2.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.218279460783364, -5.476249291669647]).bindPopup("<strong>St Ives NCI- Beaches view</strong><br><a href=\"https://camsecure.co.uk/StIvesWebcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.21855981112082, -5.476612593530449]).bindPopup("<strong>St Ives NCI- Clodgy Point</strong><br><a href=\"https://camsecure.co.uk/st_ives_clodgy_point.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.14480445404728, -5.068007141927797]).bindPopup("<strong>Gyllyngvase Beach</strong><br><a href=\"https://camsecure.co.uk/gyllyngvase_beach.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.350602774423294, -4.452578747041778]).bindPopup("<strong>Looe Beach and Harbour entrance</strong><br><a href=\"https://camsecure.co.uk/looe_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.21552587265052, -5.477138911737413]).bindPopup("<strong>St Ives Quay</strong><br><a href=\"https://camsecure.co.uk/st-ives-quayside.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.578504128915434, -4.9175345489020765]).bindPopup("<strong>Polzeath Beach</strong><br><a href=\"https://camsecure.co.uk/polzeath-beach-webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.083037008617076, -5.318657829768384]).bindPopup("<strong>Porthleven Harbour Entrance</strong><br><a href=\"https://camsecure.co.uk/porthleven_harbour_entrance.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.12027949514891, -5.530661457727625]).bindPopup("<strong>Penzance Bay</strong><br><a href=\"https://camsecure.co.uk/penzance_bay.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.03093833435933, -5.26486559570128]).bindPopup("<strong>Poldhu</strong><br><em>Panning view</em><br><a href=\"https://camsecure.co.uk/poldhu_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.21700025397345, -5.028618501746482]).bindPopup("<strong>King Harry Ferry</strong><br><a href=\"https://camsecure.co.uk/river_fal_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.33441980707058, -4.635769273225616]).bindPopup("<strong>Fowey Harbour</strong><br><a href=\"https://camsecure.co.uk/FoweyHarbour.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.34421127503883, -4.700855377809627]).bindPopup("<strong>St Austell Bay</strong><br><a href=\"https://www.sabbc.co.uk/web_cam.php\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.32971828670711, -4.646036104725492]).bindPopup("<strong>Readymoney cove</strong><br><a href=\"https://camsecure.co.uk/readymoney_beach_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.15797758826105, -5.015077187246942]).bindPopup("<strong>St Mawes Harbour</strong><br><a href=\"https://camsecure.co.uk/St_Maws_Slipway_Webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.269663980721745, -4.787046859174731]).bindPopup("<strong>Mevagissey Harbour</strong><br><a href=\"https://camsecure.co.uk/mevagissey_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.15651301950862, -5.070653312469484]).bindPopup("<strong>Falmouth Prince of Wales Pier</strong><br><a href=\"https://camsecure.co.uk/Falmouth_Yacht_Webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.21455657010751, -5.479860536955349]).bindPopup("<strong>St Ives Wharf</strong><br><a href=\"https://camsecure.co.uk/StIves3.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([51.206441271871036, -4.038573207181687]).bindPopup("<strong>Combe Martin</strong><br><a href=\"https://camsecure.co.uk/combe_martin_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([51.20934502043774, -4.1158532364226765]).bindPopup("<strong>Ilfracombe Harbour</strong><br><a href=\"https://camsecure.co.uk/Camsecure3/ilfracombe_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([51.210877968157334, -4.112718757578761]).bindPopup("<strong>Harbour Office</strong><br><a href=\"https://camsecure.co.uk/Camsecure3/ilfra2.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.20288374514137, -3.720079673267815]).bindPopup("<strong>Prawle NCI</strong><br><em>Use page link for west facing cam</em><br><a href=\"https://www.nci-prawlepoint.org.uk/east-facing-webcam/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.23654918502854, -3.7662744493965303]).bindPopup("<strong>Salcombe crossways</strong><br><a href=\"https://camsecure.co.uk/salcombe_crossways.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([51.04019829508326, -4.243836880594524]).bindPopup("<strong>Westward Ho</strong><br><a href=\"https://camsecure.co.uk/WestwardHo1.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.36555568364069, -4.144505780193923]).bindPopup("<strong>Plymouth Hoe</strong><br><a href=\"https://camsecure.co.uk/PlymouthSound.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.31959823892384, -3.610026049091129]).bindPopup("<strong>Blackpool Sands</strong><br><a href=\"https://camsecure.co.uk/blackpool_sands_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.24529229932052, -3.858528162845965]).bindPopup("<strong>Hope Cove</strong><br><a href=\"https://camsecure.co.uk/hope_cove_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.225124586036834, -3.7843872346592193]).bindPopup("<strong>South Sands</strong><br><a href=\"https://camsecure.co.uk/south_sands.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([50.48259759545543, -3.515456504596375]).bindPopup("<strong>Oddicombe Beach</strong><br><a href=\"https://camsecure.co.uk/oddicombe_beach_webcam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([-54.80562217509055, -68.30015224666735]).bindPopup("<strong>Ushuaia port</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/argentina/tierra-del-fuego/ushuaia/ushuaia.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([-33.36212188296928, -71.68480023901294]).bindPopup("<strong>Cofradía Náutica Del Pacífico</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/chile/valparaiso/algarrobo/algarrobo-chile.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([18.34875170158155, -64.93160706806388]).bindPopup("<strong>St Thomas</strong><br><em>Looking South</em><br><a href=\"https://www.skylinewebcams.com/en/webcam/us-virgin-islands/st-thomas/charlotte-amalie/charlotte-amalie-harbor.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([22.88212553908396, -109.90692678809972]).bindPopup("<strong>Cabo San Lucas</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/mexico/baja-california-sur/cabo-san-lucas/cabo-san-lucas.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([25.790850675734973, -80.18444534265127]).bindPopup("<strong>Venetian Marina</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/united-states/florida/miami/venetian-marina-biscayne-bay.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>")
 
 
 
@@ -279,7 +330,35 @@ const webcamLinks = [
   "https://www.fba.org.uk/windermere-ferry-cam",
   "https://www.camsecure.co.uk/lee_on_the_solent_webcam.html",
   "https://www.camsecure.co.uk/hamble_river_webcam.html",
-  "https://www.shore.co.uk/surf-check.html"
+  "https://www.shore.co.uk/surf-check.html",
+  "https://www.webcamtaxi.com/en/argentina/buenos-aires/mar-del-plata.html",
+  "https://www.youtube.com/watch?v=zIUoe2Bjtgk",
+  "https://www.youtube.com/watch?v=GFAEq2j3csQ",
+  "https://www.livebeaches.com/webcams/elks-lodge-shaka-cam-in-honolulu/",
+  "https://www.livebeaches.com/webcams/ehukai-beach-webcam-in-hawaii/",
+  "https://www.nyharborwebcam.com/",
+  "https://webcams24.live/webcam/sagg-main-beach-ny-webcam",
+  "https://webcams24.live/webcam/georgica-beach-east-hampton-webcam",
+  "https://webcams24.live/webcam/port-miami-florida-webcam",
+  "https://webcams24.live/webcam/anglins-pier-florida-webcam",
+  "https://webcams24.live/webcam/deerfield-beach-surf-florida-webcam",
+  "https://webcams24.live/webcam/ocean-village-resort-tofino-webcam",
+  "https://www.youtube.com/watch?v=mhQjsLBfOoY",
+  "https://hdontap.com/stream/518728/port-aransas-beach-live-webvam/",
+  "https://webcams24.live/webcam/sydney-harbour-australia-webcam",
+  "https://webcams24.live/webcam/sydney-harbour-bridge-webcam",
+  "https://www.skylinewebcams.com/en/webcam/espana/canarias/santa-cruz-de-tenerife/playa-troya.html",
+  "https://www.skylinewebcams.com/en/webcam/espana/canarias/santa-cruz-de-tenerife/playa-del-duque.html",
+  "https://webcams24.live/webcam/patitiri-port-greece-webcam",
+  "https://webcams24.live/webcam/view-from-hotel-angelica-thasos-greece-webcam",
+  "https://webcams24.live/webcam/duhner-strandpromenade-cuxhaven-webcam",
+  "https://webcams24.live/webcam/westerland-sylt-webcam",
+  "https://webcams24.live/webcam/crystal-bay-beach-resort-samui-webcam",
+  "https://www.coralstoneclub.com/photo-gallery/beachcams/",
+  "https://www.sevenstarsgracebay.com/live-cam",
+  "https://webcams24.live/webcam/flamand-beach-gustavia-saint-barthelemy-webcam",
+  "https://hdontap.com/stream/541510/baha-mar-nassau-bahamas-live-webcam/"
+
 ];
 
 // --- Random open helper (unchanged) ---
