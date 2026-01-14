@@ -4,7 +4,7 @@
 // --------------------
 
 // 1) Create the map (choose your preferred starting view)
-const map = L.map('map').setView([44, 0], 2); // or [0, 0], 2
+const map = L.map('map').setView([10, 0], 2); // or [0, 0], 2
 
 // 2) Constrain to a single world and make the bounds firm
 const oneWorld = L.latLngBounds([-85, -180], [85, 180]);
@@ -463,6 +463,7 @@ webcamMarkers.forEach(marker => {
 // Add cluster to map
 // --------------------
 map.addLayer(markerCluster);
+
 
 
 
