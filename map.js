@@ -1,35 +1,37 @@
 
+// --------------------
+// Create map centred on the UK (single-world, no wrap)
+// --------------------
+
+// 1) Create the map (choose your preferred starting view)
+const map = L.map('map').setView([44, 0], 2); // or [0, 0], 2
+
+// 2) Constrain to a single world and make the bounds firm
+const oneWorld = L.latLngBounds([-85, -180], [85, 180]);
+map.setMaxBounds(oneWorld);
+
+
+// 3) Tiles: disable world wrapping so extra copies aren't drawn
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "© OpenStreetMap contributors",
+  noWrap: true
+}).addTo(map);
 
 // --------------------
-// Create map centred on the UK
+// Geocoder (position adapts on mobile)
 // --------------------
-const map = L.map('map').setView([54, -2], 3);
-
-
-// Choose geocoder position based on viewport width
-const geocoderPosition = window.matchMedia('(max-width: 800px)').matches ? 'bottomleft' : 'topleft';
-
-
-
-// --------------------
-// Add UK-only search
-// --------------------
+const geocoderPosition = window.matchMedia("(max-width: 800px)").matches
+  ? "bottomleft"
+  : "topleft";
 
 L.Control.geocoder({
   defaultMarkGeocode: false,
-  placeholder: "Search places…",
+  placeholder: "Search places...",
   geocoder: L.Control.Geocoder.nominatim(),
   position: geocoderPosition
 })
 .on("markgeocode", function (e) { map.fitBounds(e.geocode.bbox); })
 .addTo(map);
-
-// --------------------
-// Add OpenStreetMap tiles
-// --------------------
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "© OpenStreetMap contributors"
-}).addTo(map);
 
 // --------------------
 // Create marker cluster group
@@ -43,6 +45,7 @@ const markerCluster = L.markerClusterGroup({
 // Webcam markers
 // --------------------
 const webcamMarkers = [
+
 
 
 L.marker([50.66268307823406, -1.5837663777002342]).bindPopup("<strong>Needles</strong><br><a href=\"https://www.isleofwight.com/webcams/needles/\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
@@ -460,5 +463,6 @@ webcamMarkers.forEach(marker => {
 // Add cluster to map
 // --------------------
 map.addLayer(markerCluster);
+
 
 
