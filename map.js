@@ -236,7 +236,23 @@ L.marker([25.073409460530893, -77.39707934712706]).bindPopup("<strong>Gooman Bay
   L.marker([18.34875170158155, -64.93160706806388]).bindPopup("<strong>St Thomas</strong><br><em>Looking South</em><br><a href=\"https://www.skylinewebcams.com/en/webcam/us-virgin-islands/st-thomas/charlotte-amalie/charlotte-amalie-harbor.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
   L.marker([22.88212553908396, -109.90692678809972]).bindPopup("<strong>Cabo San Lucas</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/mexico/baja-california-sur/cabo-san-lucas/cabo-san-lucas.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
   L.marker([25.790850675734973, -80.18444534265127]).bindPopup("<strong>Venetian Marina</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/united-states/florida/miami/venetian-marina-biscayne-bay.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
-L.marker([34.69151258474264, 138.97267239888512]).bindPopup("<strong>Shirahama Beach</strong><br><a href=\"https://www.webcamtaxi.com/en/japan/shizuoka-prefecture/shirahama-ohamabeach-cam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>")
+L.marker([34.69151258474264, 138.97267239888512]).bindPopup("<strong>Shirahama Beach</strong><br><a href=\"https://www.webcamtaxi.com/en/japan/shizuoka-prefecture/shirahama-ohamabeach-cam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+  L.marker([-33.94096157489294, 18.375886509010925]).bindPopup("<strong>Clifton Beach</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/south-africa/western-cape/cape-town/cape-town-clifton-beach.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([-34.12603360266923, 18.45077686275692]).bindPopup("<strong>Kalk Bay</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/south-africa/western-cape/cape-town/kalk-bay.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([5.5465386249744775, 73.45832622336442]).bindPopup("<strong>Kuredo Island</strong><br><em>Exact position uncertain</em><br><a href=\"https://www.skylinewebcams.com/en/webcam/maldives/lhaviyani-atoll/kurendhoo/maldives-kuredu.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([5.547749177517357, 73.46557824519554]).bindPopup("<strong>Kuredo Beach</strong><br><em>Exact position uncertain</em><br><a href=\"https://www.skylinewebcams.com/en/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([5.232937584083451, 73.11194083905673]).bindPopup("<strong>Amilla Fushi</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/maldives/baa-atoll/amilla-fushi/amilla-fushi.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([-5.728079319578253, 39.291505501677534]).bindPopup("<strong>Nungwi Beach</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/zanzibar/zanzibar-north/nungwi/zanzibar-nungwi.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([-6.160221707574571, 39.18848272094968]).bindPopup("<strong>Zanzibar Harbour</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/zanzibar/zanzibar-urban-west-region/zanzibar-city/stone-town.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([-5.983081000993049, 39.37691728366773]).bindPopup("<strong>Kiwengwa</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/zanzibar/zanzibar-north/kiwengwa/zanzibar-kiwengwa.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([25.109690653019186, 55.14064807128566]).bindPopup("<strong>Palm Jumeirah</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/united-arab-emirates/dubai/dubai/fairmont-the-palm.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([11.180146775734409, 119.38787903018861]).bindPopup("<strong>El Nido Beach</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/philippines/mimaropa/palawan/el-nido.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([22.28619298249419, 114.18914671681081]).bindPopup("<strong>Hong Kong Harbour</strong><br><em>Looking West</em><br><a href=\"https://www.youtube.com/watch?v=QT_ODf7769U\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([9.679114327872902, 100.06836024845688]).bindPopup("<strong>Haad Rin Beach</strong><br><a href=\"https://www.youtube.com/watch?v=byhWzqNSsF0\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([9.563975694687246, 100.06168218620307]).bindPopup("<strong>Bangrak Beach</strong><br><a href=\"https://www.youtube.com/watch?v=x73IEW0fOo0\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([9.568022136264142, 100.06138220216158]).bindPopup("<strong>Wat Phra Yai</strong><br><a href=\"https://www.youtube.com/watch?v=73PKPbmORX4\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([5.960834380818029, 80.39939753964639]).bindPopup("<strong>Plantations Beach</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/sri-lanka/southern-province/midigama/plantations-beach.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([-32.92168579596504, 151.77556965574135]).bindPopup("<strong>Newcastle Port</strong><br><a href=\"https://www.youtube.com/watch?v=tbQPUvUifEc\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
 ];
 
 
@@ -444,4 +460,5 @@ webcamMarkers.forEach(marker => {
 // Add cluster to map
 // --------------------
 map.addLayer(markerCluster);
+
 
