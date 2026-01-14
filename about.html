@@ -1,58 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3815077148389807"
-     crossorigin="anonymous"></script>
-<link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <title>About | Coastcam.org</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px 16px;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    h1, h2 {
-      color: #111;
-    }
-
-    a {
-      color: #0066cc;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.85em;
-      color: #666;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>About – Coastcam.org</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
- <nav class="top-menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="contact.html">Contact</a>
-<a href="help.html">Help</a>
-  </nav>
+<nav class="top-menu" aria-label="Main">
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-links">Menu</button>
+    <div id="primary-links" class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+        <a href="help.html">Help</a>
+    </div>
+</nav>
 
-<h1>About Coastcam.org</h1>
+<h1>About</h1>
+
+<div class="logo-container">
+    <img src="logo.jpg" alt="coastcam.org logo" class="site-logo">
+</div>
 
 <p>
 Coastcam.org is a free, independent directory of publicly available coastal, harbour and maritime webcams.
 </p>
 
 <p>
-The site was created to make it easy to find live views of the coast — whether you're checking weather and sea conditions, planning a trip, keeping an eye on your home waters, or just enjoying the view.
+The site was created to make it easy to find live views of the coast — whether you're checking weather and sea conditions,
+planning a trip, keeping an eye on your home waters, or just enjoying the view.
 </p>
 
 <h2>What Coastcam.org Is (and Isn’t)</h2>
@@ -67,10 +48,10 @@ We simply link to publicly available camera feeds and pages provided by:
 </p>
 
 <ul>
-  <li>Harbour authorities</li>
-  <li>Sailing clubs and marinas</li>
-  <li>Local councils and organisations</li>
-  <li>Private individuals and businesses</li>
+    <li>Harbour authorities</li>
+    <li>Sailing clubs and marinas</li>
+    <li>Local councils and organisations</li>
+    <li>Private individuals and businesses</li>
 </ul>
 
 <h2>Accuracy and Availability</h2>
@@ -87,39 +68,43 @@ If you spot a broken link or an incorrect location, we’d really appreciate you
 <h2>Submitting a Webcam</h2>
 
 <p>
-If you run a coastal or maritime webcam and would like it included, or if you know of a publicly accessible webcam that isn’t listed yet, you can submit it using the Submit a coastal webcam button on the main page.
+If you run a coastal or maritime webcam and would like it included, or if you know of a publicly accessible webcam that isn’t listed yet,
+you can submit it using the Submit a coastal webcam button on the main page.
 </p>
 
-<p>
-All submissions are reviewed before being added.
-</p>
+<p>All submissions are reviewed before being added.</p>
 
 <h2>Why the Site Is Free</h2>
 
 <p>
-Coastcam.org is run as a personal project.
-Any advertising shown helps cover basic running costs such as domain registration and site maintenance.
+Coastcam.org is run as a personal project. Any advertising shown helps cover basic running costs such as domain
+registration and site maintenance.
 </p>
 
-<p>
-We aim to keep advertising minimal and unobtrusive.
-</p>
+<p>We aim to keep advertising minimal and unobtrusive.</p>
 
 <h2>Get in Touch</h2>
 
 <p>
 For general feedback, corrections or suggestions, please use the <a href="contact.html">contact</a> page. We'd love to hear from you!
 </p>
+
 <footer>
-  <p>
-    © Coastcam.org
-  </p>
-  <p>
-    <a href="index.html">Back to map</a> |
-    <a href="privacy.html">Privacy Policy</a>
-  </p>
+    <p>© Coastcam.org</p>
+    <p><a href="index.html">Back to map</a> | <a href="privacy.html">Privacy Policy</a></p>
 </footer>
 
-</body>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const links = document.getElementById('primary-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('open', !open);
+    });
+  }
+</script>
 
+</body>
 </html>

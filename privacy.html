@@ -1,55 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3815077148389807"
-     crossorigin="anonymous"></script>
-<link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <title>Privacy Policy | Coastcam.org</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px 16px;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    h1, h2 {
-      color: #111;
-    }
-
-    a {
-      color: #0066cc;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.85em;
-      color: #666;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Privacy Policy – Coastcam.org</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
- <nav class="top-menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="contact.html">Contact</a>
-<a href="help.html">Help</a>
-  </nav>
+<nav class="top-menu" aria-label="Main">
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-links">Menu</button>
+    <div id="primary-links" class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+        <a href="help.html">Help</a>
+    </div>
+</nav>
 
 <h1>Privacy Policy</h1>
 
-<p>
-Last updated: <strong>January 2026</strong>
-</p>
+<div class="logo-container">
+    <img src="logo.jpg" alt="coastcam.org logo" class="site-logo">
+</div>
+
+<p>Last updated: <strong>January 2026</strong></p>
 
 <p>
 Coastcam.org is a free directory of publicly available coastal, harbour and maritime webcams.
@@ -57,71 +35,61 @@ Your privacy is important to us.
 </p>
 
 <h2>Information We Collect</h2>
+<p>We do not collect personal information directly from visitors.</p>
 
 <p>
-We do not collect personal information such as names, email addresses, or phone numbers directly from visitors.
-</p>
-
-<p>
-If you submit a webcam via a form, the information provided (such as webcam URL and location) is used solely for the purpose of reviewing and adding webcams to the site.
+If you submit a webcam via a form, the information provided is used solely for reviewing and adding webcams.
 </p>
 
 <h2>Cookies and Analytics</h2>
-
 <p>
-Coastcam.org may use cookies and similar technologies to improve user experience and understand how the site is used.
-This may include:
+We may use cookies or similar technologies for analytics and advertising.
 </p>
 
 <ul>
-  <li>Basic analytics (such as page views and approximate location)</li>
-  <li>Advertising cookies used by third-party vendors</li>
+    <li>Basic analytics</li>
+    <li>Advertising cookies used by third‑party vendors</li>
 </ul>
 
 <h2>Advertising (Google AdSense)</h2>
-
 <p>
-This site may display advertisements provided by Google AdSense.
-Google and its partners may use cookies to show ads based on your visits to this and other websites.
+This site may display adverts provided by Google AdSense.
 </p>
 
 <p>
-You can learn more about how Google uses data from partner sites here:
-<br>
+More information here:<br>
 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">
 https://policies.google.com/technologies/ads
 </a>
 </p>
 
-<h2>Third-Party Websites</h2>
-
+<h2>Third‑Party Websites</h2>
 <p>
-Coastcam.org links to external webcam websites.
-We are not responsible for the privacy practices or content of those third-party sites.
+Coastcam.org links to external webcam sites. We are not responsible for their privacy practices.
 </p>
 
 <h2>Your Choices</h2>
-
-<p>
-You can choose to disable cookies through your browser settings.
-Please note that some site features may not function properly if cookies are disabled.
-</p>
+<p>You may disable cookies in your browser settings.</p>
 
 <h2>Contact</h2>
-
-<p>
-If you have any questions about this privacy policy, please contact us via the website.
-</p>
+<p>If you have questions about this policy, please contact us.</p>
 
 <footer>
-  <p>
-    © Coastcam.org
-  </p>
-  <p>
-    <a href="index.html">Back to map</a>
-  </p>
+    <p>© Coastcam.org</p>
+    <p><a href="index.html">Back to map</a></p>
 </footer>
 
-</body>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const links = document.getElementById('primary-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('open', !open);
+    });
+  }
+</script>
 
+</body>
 </html>

@@ -5,78 +5,75 @@
   <meta charset="UTF-8">
   <title>Coastcam.org</title>
 
-  <!-- Leaflet CSS -->
+  <!-- Mobile viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- Browser theme color (Android status bar) -->
+  <meta name="theme-color" content="#314158">
+
+  <!-- Leaflet & plugins CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-
-  <!-- MarkerCluster CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
-
-  <!-- Leaflet Control Geocoder CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css">
 
-  <!-- Your custom CSS -->
+  <!-- Your CSS -->
   <link rel="stylesheet" href="style.css">
-<script data-goatcounter="https://coastcam.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
+  <!-- Analytics (already async) -->
+  <script data-goatcounter="https://coastcam.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
-<body>
+<body class="index-page">
+  <header class="site-header">
+    <nav class="top-menu" aria-label="Main">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-links">Menu</button>
+      <div id="primary-links" class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+        <a href="help.html">Help</a>
+      </div>
+    </nav>
 
-  <nav class="top-menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="contact.html">Contact</a>
-<a href="help.html">Help</a>
-
-
- 
-
-
-  </nav>
-
-<div class="logo-container">
-  <img src="logo.jpg" alt="coastcam.org logo" class="site-logo">
-</div>
-
- 
-
-
+    <div class="logo-container">
+      <img src="logo.jpg" alt="coastcam.org logo" class="site-logo">
+    </div>
+  </header>
 
   <div class="button-container">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFILCsLrJ-_kakaVQS-76GhcW53o9hrddo6p1OZykRktK7Rw/viewform?usp=dialogK"
-       target="_blank"
-       class="submit-btn">
-      Submit a coastal webcam
-    </a>
+       target="_blank" class="submit-btn">Submit a coastal webcam</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4P5ymr0Llzl6F8bQUnOXiPLlCBjBhU6NKHHtQWUZM3-9Ezw/viewform?usp=publish-editor"
-       target="_blank"
-       class="report-btn">
-      Report a fault
-    </a>
-<a id="randomWebcamBtn" class="random-btn" href="#" role="button">🎲 Random Webcam</a>
+       target="_blank" class="report-btn">Report a fault</a>
+    <a id="randomWebcamBtn" class="random-btn" href="#" role="button">🎲 Random Webcam</a>
   </div>
 
-  <!-- Map container -->
-  <div id="map" style="height: 80vh; width: 100%;"></div>
-<footer class="site-footer">
-<p>Coastcam.org is a free directory of publicly available coastal, harbour and maritime webcams
-</p>
-<p><a href="privacy.html">Privacy Policy</a>
-</p>
-</footer>
+  <!-- Map container (CSS will set height responsively) -->
+  <div id="map"></div>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <footer class="site-footer">
+    <p>Coastcam.org is a free directory of publicly available coastal, harbour and maritime webcams</p>
+    <p><a href="privacy.html">Privacy Policy</a></p>
+  </footer>
 
-  <!-- MarkerCluster JS -->
-  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-
-  <!-- Leaflet Control Geocoder JS -->
-  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-
-  <!-- Your map script -->
-  <script src="map.js"></script>
+  <!-- JS: defer to improve first paint on mobile -->
+  <script defer src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script defer src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  <script defer src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <script defer src="map.js"></script>
+  <script>
+    // Mobile menu toggle (no dependency)
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.getElementById('primary-links');
+    if (toggle && links) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        links.classList.toggle('open', !open);
+      });
+    }
+  </script>
 </body>
 </html>
 

@@ -1,98 +1,53 @@
 
+
+/* ---- Base tokens ---- */
+:root {
+  --brand: #314158;
+  --accent: #D0872E;
+  --text: #222;
+}
+
+/* ---- Base typography ---- */
 body {
-margin: 0;
-font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.45;
+  color: var(--text);
 }
 
 h1 {
-text-align: center;
-margin: 10px 0;
+  text-align: center;
+  margin: 10px 0;
 }
 
-#map {
-height: 90vh;
-}
-.button-container {
-text-align: center; /* center the buttons horizontally */
-margin-bottom: 10px;
-}
-
-/* shared styles for both buttons */
-.button-container a {
-display: inline-block;
-padding: 12px 24px;
-font-weight: bold;
-text-decoration: none;
-border-radius: 6px;
-cursor: pointer;
-margin: 0 5px; /* space between buttons */
-color: white;
-}
-
-/* specific button colors */
-.random-btn {
-background: #FDC745;
-color: white;
-}
-
-.random-btn:hover {
-background: #D0872E;
-}
-
-.enquire-btn {
-background: #314158;
-color: white;
-}
-
-.enquire-btn:hover {
-background: #D0872E;
-}
-
-.submit-btn {
-background: #2c7be5;
-color: white;
-}
-
-.submit-btn:hover {
-background: #D0872E;
-}
-
-.report-btn {
-background: #e52c2c;
-color: white;
-}
-
-.report-btn:hover {
-background: #D0872E;
-}
-
-.site-footer {
-width: 100%;
-box-sizing: border-box;
-padding: 16px 12px;
-font-size: 0.85em;
-color: #555;
-text-align: center;
-}
-
-.site-footer p {
-margin: 6px 0;
-}
-
-.site-footer a {
-color: #555;
-text-decoration: underline;
-}
-
-
+/* ---- Top navigation ---- */
 .top-menu {
   display: flex;
   justify-content: center;
-  background: #314158;
-  padding: 12px 0;
+  align-items: center;
+  background: var(--brand);
+  padding: 10px;
   gap: 24px;
-  font-size: 1.1em;
   box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  position: sticky;   /* keeps nav visible as you scroll on mobile */
+  top: 0;
+  z-index: 1000;      /* sit above Leaflet controls */
+}
+
+/* Collapsible bits for small screens */
+.top-menu .menu-toggle {
+  display: none; /* becomes visible at <=800px */
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.top-menu .menu-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .top-menu a {
@@ -103,12 +58,11 @@ text-decoration: underline;
   border-radius: 4px;
   transition: background 0.2s;
 }
-
 .top-menu a:hover {
-  background: #D0872E;
+  background: var(--accent);
 }
 
-
+/* ---- “Help us grow” (kept from your original) ---- */
 .help-us-grow-menu {
   margin-left: 32px;
   background: #fffbe6;
@@ -120,7 +74,6 @@ text-decoration: underline;
   box-shadow: 0 2px 8px rgba(44,123,229,0.07);
   display: inline-block;
 }
-
 .help-us-grow-menu .highlight {
   color: #2c7be5;
   font-weight: bold;
@@ -135,6 +88,82 @@ text-decoration: underline;
   background: #d0e6fa;
   text-decoration: underline;
 }
+
+/* ---- Logo area ---- */
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+.site-logo {
+  max-width: 320px;   /* desktop max */
+  width: 90%;
+  height: auto;
+  display: block;
+}
+
+/* ---- Buttons row ---- */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+}
+.button-container a {
+  display: inline-block;
+  padding: 12px 18px; /* slightly smaller for phones */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  min-height: 44px;   /* thumb-friendly tap target */
+}
+
+/* Restore original slimmer buttons on desktop */
+@media (min-width: 801px) {
+  .button-container a {
+    min-height: unset;
+    padding: 12px 24px; /* restores your original desktop padding */
+  }
+}
+
+
+/* Specific button colors (your originals kept) */
+.random-btn { background: #FDC745; color: #fff; }
+.random-btn:hover { background: #D0872E; }
+.enquire-btn { background: #314158; color: #fff; }
+.enquire-btn:hover { background: #D0872E; }
+.submit-btn { background: #2c7be5; color: #fff; }
+.submit-btn:hover { background: #D0872E; }
+.report-btn { background: #e52c2c; color: #fff; }
+.report-btn:hover { background: #D0872E; }
+
+/* ---- Map sizing ----
+   Desktop = generous height
+   Mobile = use remaining viewport height after header/buttons/footer */
+#map {
+  width: 100%;
+  height: 82vh;  /* desktop default (replaces conflicting 90vh/80vh) */
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 12px;
+  font-size: 0.95em;
+  color: #555;
+  text-align: center;
+}
+.site-footer p { margin: 6px 0; }
+.site-footer a { color: #555; text-decoration: underline; }
+
+/* ---- Responsive tweaks ---- */
 @media (max-width: 800px) {
   .help-us-grow-menu {
     display: block;
@@ -142,22 +171,41 @@ text-decoration: underline;
     font-size: 0.98em;
     text-align: left;
   }
+
+  .site-logo { max-width: 240px; }
+
+  /* Show hamburger and collapse links until opened */
+  .top-menu { gap: 12px; }
+  .top-menu .menu-toggle { display: inline-block; }
+  .top-menu .menu-links { display: none; }
+  .top-menu .menu-links.open { display: flex; }
+
+  /* Stack/wrap buttons nicely */
+  .button-container a {
+    flex: 1 1 240px;
+    text-align: center;
+  }
+
+  /* Fill the screen under the header/buttons/footer on phones */
+  #map {
+    height: calc(100vh - 270px);
+    /* If this is a tad short/tall on your device, adjust 270px ±30px */
+  }
 }
 
-
-.logo-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-top: 0px;
-  margin-bottom: 0px;
+/* ---- Optional dark mode polish ---- */
+@media (prefers-color-scheme: dark) {
+  :root { --text: #eee; }
+  body { background: #0f1720; color: var(--text); }
+  .top-menu { background: #0b1320; }
+  .site-footer, .site-footer a { color: #bbb; }
 }
 
-.site-logo {
-  max-width: 320px;
-  width: 90%;
-  height: auto;
-  display: block;
+body:not(.index-page) {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px;
 }
+
+``
 

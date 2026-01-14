@@ -3,19 +3,25 @@
 // --------------------
 // Create map centred on the UK
 // --------------------
-const map = L.map('map').setView([0, 0], 2);
+const map = L.map('map').setView([54, -2], 3);
+
+
+// Choose geocoder position based on viewport width
+const geocoderPosition = window.matchMedia('(max-width: 800px)').matches ? 'bottomleft' : 'topleft';
+
+
 
 // --------------------
 // Add UK-only search
 // --------------------
+
 L.Control.geocoder({
   defaultMarkGeocode: false,
   placeholder: "Search places…",
-  geocoder: L.Control.Geocoder.nominatim()
+  geocoder: L.Control.Geocoder.nominatim(),
+  position: geocoderPosition
 })
-.on("markgeocode", function (e) {
-  map.fitBounds(e.geocode.bbox);
-})
+.on("markgeocode", function (e) { map.fitBounds(e.geocode.bbox); })
 .addTo(map);
 
 // --------------------
@@ -29,7 +35,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // Create marker cluster group
 // --------------------
 const markerCluster = L.markerClusterGroup({
-  disableClusteringAtZoom: 9,
+  disableClusteringAtZoom: 8,
   chunkedLoading: true
 });
 
@@ -229,10 +235,8 @@ L.marker([25.073409460530893, -77.39707934712706]).bindPopup("<strong>Gooman Bay
   L.marker([-33.36212188296928, -71.68480023901294]).bindPopup("<strong>Cofradía Náutica Del Pacífico</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/chile/valparaiso/algarrobo/algarrobo-chile.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
   L.marker([18.34875170158155, -64.93160706806388]).bindPopup("<strong>St Thomas</strong><br><em>Looking South</em><br><a href=\"https://www.skylinewebcams.com/en/webcam/us-virgin-islands/st-thomas/charlotte-amalie/charlotte-amalie-harbor.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
   L.marker([22.88212553908396, -109.90692678809972]).bindPopup("<strong>Cabo San Lucas</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/mexico/baja-california-sur/cabo-san-lucas/cabo-san-lucas.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
-  L.marker([25.790850675734973, -80.18444534265127]).bindPopup("<strong>Venetian Marina</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/united-states/florida/miami/venetian-marina-biscayne-bay.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>")
-
-
-
+  L.marker([25.790850675734973, -80.18444534265127]).bindPopup("<strong>Venetian Marina</strong><br><a href=\"https://www.skylinewebcams.com/en/webcam/united-states/florida/miami/venetian-marina-biscayne-bay.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>"),
+L.marker([34.69151258474264, 138.97267239888512]).bindPopup("<strong>Shirahama Beach</strong><br><a href=\"https://www.webcamtaxi.com/en/japan/shizuoka-prefecture/shirahama-ohamabeach-cam.html\" target=\"_blank\" rel=\"noopener\">View webcam</a>")
 ];
 
 
@@ -357,7 +361,55 @@ const webcamLinks = [
   "https://www.coralstoneclub.com/photo-gallery/beachcams/",
   "https://www.sevenstarsgracebay.com/live-cam",
   "https://webcams24.live/webcam/flamand-beach-gustavia-saint-barthelemy-webcam",
-  "https://hdontap.com/stream/541510/baha-mar-nassau-bahamas-live-webcam/"
+  "https://hdontap.com/stream/541510/baha-mar-nassau-bahamas-live-webcam/",
+"https://camsecure.co.uk/oban%20bay%20webcam.html",
+"https://camsecure.co.uk/orkney%20islands%20webcam.html",
+"https://camsecure.co.uk/bays%20loch%20webcam.html",
+"https://camsecure.co.uk/oban_waterside_webcam.html",
+"https://camsecure.co.uk/oban%20bay%20to%20kerrera%20webcam.html",
+"https://camsecure.co.uk/firth_of_forth_webcam.html",
+"https://camsecure.co.uk/Camsecure3/Dundee_Webcam.html",
+"https://camsecure.co.uk/st_andrews_beach.html",
+"https://camsecure.co.uk/porthgwidden_beach_webcam.html",
+"https://camsecure.co.uk/sennen_cove_webcam.html",
+"https://camsecure.co.uk/sennen_harbour_webcam.html",
+"https://camsecure.co.uk/Camsecure3/Gwithian_Beach_Webcam.html",
+"https://camsecure.co.uk/marazion.html",
+"https://camsecure.co.uk/newlyn%20live%20webcam.html",
+"https://camsecure.co.uk/StIves2.html",
+"https://camsecure.co.uk/StIvesWebcam.html",
+"https://camsecure.co.uk/st_ives_clodgy_point.html",
+"https://camsecure.co.uk/gyllyngvase_beach.html",
+"https://camsecure.co.uk/looe_webcam.html",
+"https://camsecure.co.uk/st-ives-quayside.html",
+"https://camsecure.co.uk/polzeath-beach-webcam.html",
+"https://camsecure.co.uk/porthleven_harbour_entrance.html",
+"https://camsecure.co.uk/penzance_bay.html",
+"https://camsecure.co.uk/poldhu_webcam.html",
+"https://camsecure.co.uk/river_fal_webcam.html",
+"https://camsecure.co.uk/FoweyHarbour.html",
+"https://www.sabbc.co.uk/web_cam.php",
+"https://camsecure.co.uk/readymoney_beach_webcam.html",
+"https://camsecure.co.uk/St_Maws_Slipway_Webcam.html",
+"https://camsecure.co.uk/mevagissey_webcam.html",
+"https://camsecure.co.uk/Falmouth_Yacht_Webcam.html",
+"https://camsecure.co.uk/StIves3.html",
+"https://camsecure.co.uk/combe_martin_webcam.html",
+"https://camsecure.co.uk/Camsecure3/ilfracombe_webcam.html",
+"https://camsecure.co.uk/Camsecure3/ilfra2.html",
+"https://www.nci-prawlepoint.org.uk/east-facing-webcam/",
+"https://camsecure.co.uk/salcombe_crossways.html",
+"https://camsecure.co.uk/WestwardHo1.html",
+"https://camsecure.co.uk/PlymouthSound.html",
+"https://camsecure.co.uk/blackpool_sands_webcam.html",
+"https://camsecure.co.uk/hope_cove_webcam.html",
+"https://camsecure.co.uk/south_sands.html",
+"https://camsecure.co.uk/oddicombe_beach_webcam.html",
+"https://www.skylinewebcams.com/en/webcam/argentina/tierra-del-fuego/ushuaia/ushuaia.html",
+"https://www.skylinewebcams.com/en/webcam/chile/valparaiso/algarrobo/algarrobo-chile.html",
+"https://www.skylinewebcams.com/en/webcam/us-virgin-islands/st-thomas/charlotte-amalie/charlotte-amalie-harbor.html",
+"https://www.skylinewebcams.com/en/webcam/mexico/baja-california-sur/cabo-san-lucas/cabo-san-lucas.html",
+"https://www.skylinewebcams.com/en/webcam/united-states/florida/miami/venetian-marina-biscayne-bay.html"
 
 ];
 
@@ -392,5 +444,4 @@ webcamMarkers.forEach(marker => {
 // Add cluster to map
 // --------------------
 map.addLayer(markerCluster);
-
 

@@ -2,95 +2,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3815077148389807"
-     crossorigin="anonymous"></script>
-<link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <title>Help | Coastcam.org</title>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px 16px;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    h1, h2 {
-      color: #111;
-    }
-
-    a {
-      color: #0066cc;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.85em;
-      color: #666;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Help – Coastcam.org</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<nav class="top-menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="contact.html">Contact</a>
-<a href="help.html">Help</a>
-  </nav>
 
-  <h1>Help &amp; How to Use Coastcam.org</h1>
+<nav class="top-menu" aria-label="Main">
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-links">Menu</button>
+    <div id="primary-links" class="menu-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+        <a href="help.html">Help</a>
+    </div>
+</nav>
 
-  <h2>Finding Webcams on the Map</h2>
-  <p>
-    The main page features an interactive map showing the locations of coastal, harbour and maritime webcams around the world. Each camera is marked with a map pin.
-  </p>
+<h1>Help & How to Use</h1>
 
-  <h2>Searching for Places</h2>
-  <p>
-    By clicking on the magnifying glass in the top right of the map you can use a search box to find places by name. Start typing a city, town, beach, harbour, or landmark, and select from the suggestions. The map will zoom to your chosen location and then you can look for webcams nearby.
-  </p>
+<div class="logo-container">
+    <img src="logo.jpg" alt="coastcam.org logo" class="site-logo">
+</div>
 
-  <h2>Webcam Clusters</h2>
-  <p>
-    When the map is zoomed out, webcams that are close together are grouped into clusters. These clusters show a number indicating how many webcams are in that area. As you zoom in, the clusters will break apart to show individual map pins. Click on a cluster to zoom in and reveal more webcams.
-  </p>
+<h2>Finding Webcams on the Map</h2>
+<p>
+The main page features an interactive map showing the locations of coastal, harbour and maritime webcams.
+Each camera is marked with a map pin.
+</p>
 
-  <h2>Viewing a Webcam</h2>
-  <p>
-    Click any map pin to see details about that webcam and a link to view the live feed. The webcam will open in a new tab or window.
-  </p>
+<h2>Searching for Places</h2>
+<p>
+Click the magnifying glass on the map to search for places. Start typing a city, beach, harbour, or landmark,
+then choose from the suggestions.
+</p>
 
-  <h2>Submitting or Reporting Webcams</h2>
-  <p>
-    If you know of a webcam that isn’t listed, or if you spot a broken link, use the “Submit a coastal webcam” or “Report a fault” buttons at the top of the main page.
-  </p>
+<h2>Webcam Clusters</h2>
+<p>
+When zoomed out, webcams in the same area appear as clusters. Zoom in to separate them into individual pins.
+</p>
 
-  <h2>The 🎲 Random Webcam button</h2>
-  <p>
-    On the main page there is a yellow 🎲 Random Webcam button. This is about as exciting as coastcam.org is going to get, enjoy!
-  </p>
+<h2>Viewing a Webcam</h2>
+<p>
+Click any map pin to view the webcam and open its dedicated page in a new tab.
+</p>
 
-  <h2>Need More Help?</h2>
-  <p>
-    If you have questions or suggestions, please visit the <a href="contact.html">Contact</a> page.
-  </p>
+<h2>Submitting or Reporting Webcams</h2>
+<p>
+Use the Submit or Report buttons on the main page to help improve the directory.
+</p>
+
+<h2>The 🎲 Random Webcam button</h2>
+<p>
+On the main page there is a yellow Random Webcam button for when you're feeling adventurous!
+</p>
+
+<h2>Need More Help?</h2>
+<p>
+If you have questions or suggestions, please visit the <a href="contact.html">Contact</a> page.
+</p>
+
 <footer>
-  <p>
-    © Coastcam.org
-  </p>
-  <p>
-    <a href="index.html">Back to map</a>
-  </p>
+    <p>© Coastcam.org</p>
+    <p><a href="index.html">Back to map</a></p>
 </footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const links = document.getElementById('primary-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('open', !open);
+    });
+  }
+</script>
+
 </body>
 </html>
-
-
-
-
-
